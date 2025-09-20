@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nepal Astronomical Society (NASO)</title>
+    <title>Youth Innovative Science Society (YISS)</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Reset and Base Styles */
@@ -162,7 +162,7 @@
             flex: 1;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
         }
 
         /* Programs Section */
@@ -189,7 +189,10 @@
             transform: translateY(-5px);
         }
 
-        .program-image {
+        .program-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
             height: 200px;
             background-color: #0c4da2;
         }
@@ -227,39 +230,6 @@
             margin-bottom: 5px;
         }
 
-        /* News Section */
-        .news {
-            padding: 80px 0;
-            background-color: #f8f9fa;
-        }
-
-        .news-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .news-card {
-            background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        .news-image {
-            height: 180px;
-            background-color: #ddd;
-        }
-
-        .news-content {
-            padding: 20px;
-        }
-
-        .news-date {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 10px;
-        }
 
         /* Footer */
         footer {
@@ -342,11 +312,11 @@
         <div class="top-bar">
             <div class="container top-bar-content">
                 <div class="contact-info">
-                    <span><i class="fas fa-envelope"></i> info@nepalastronomicalsociety.org</span>
+                    <span><i class="fas fa-envelope"></i> youthinnovativesciencesociety@gmail.com</span>
                 </div>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-x"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
@@ -354,15 +324,14 @@
         </div>
         <div class="container header-main">
             <div class="logo">
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iNDUiIGZpbGw9IiMwYzRkYTIiLz48cGF0aCBkPSJNNDAgMjVMNTAgMTVMNjAgMjVMNTAgMzVaIiBmaWxsPSJ3aGl0ZSIvPjxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjEwIiBmaWxsPSJ3aGl0ZSIvPjxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjMiIGZpbGw9IiMwYzRkYTIiLz48cGF0aCBkPSJNNzUgNjVMNjUgNzVMNTAgNjVWNzVINzVWNjVaIiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==" alt="NASO Logo">
-                <div class="logo-text">Nepal Astronomical Society</div>
+                <img src="logo.png" alt="YISS Logo">
+                <div class="logo-text">Youth Innovative Science Society</div>
             </div>
             <ul class="nav-menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Programs</a></li>
                 <li><a href="#">Events</a></li>
-                <li><a href="#">News</a></li>
                 <li><a href="#">Gallery</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
@@ -372,8 +341,9 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Exploring the Universe Together</h1>
-            <p>Nepal Astronomical Society (NASO) is dedicated to promoting astronomy and space science in Nepal through education, research, and outreach activities.</p>
+            <h1>LEARN CREATE SHARE</h1>
+            <p>Youth Innovative Science Society (YISS) is dedicated to promote science and Technology in local level. With every glance through the telescope
+                , every question asked, we unravel the mysteries of the cosmos. Join us as we spark curiosity, ignite imagination, and inspire the scientists of tomorrow.</p>
             <a href="#" class="btn">Get Involved</a>
         </div>
     </section>
@@ -381,16 +351,17 @@
     <!-- About Section -->
     <section class="about">
         <div class="container">
-            <h2 class="section-title">About NASO</h2>
+            <h2 class="section-title">About YISS</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>The Nepal Astronomical Society (NASO) is a non-profit organization established in 2008 with the goal of promoting astronomy and space science in Nepal.</p>
-                    <p>We organize various programs, workshops, and star parties to engage the public and students in astronomical activities. Our mission is to create a platform for astronomy enthusiasts and professionals to share knowledge and inspire the next generation of stargazers.</p>
-                    <p>NASO is actively involved in national and international astronomy projects, working to put Nepal on the global astronomy map.</p>
+                    <p>Youth Innovative Science Society(YISS) is a non-profit organization established in 2019 with the goal of promoting science and technology in Itahari.</p>
+                    <p>We organize various programs, outreach, and night sky observation to engage the public and students in science. Our mission is to create a platform to learn create and share thier knowledge to others.</p>
                     <a href="#" class="btn">Learn More</a>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1465101162946-4377e57745c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="About NASO">
+                    <img src="first_Program.jpg" alt="About NASO"
+                    width="250"
+                    height="250">
                 </div>
             </div>
         </div>
@@ -402,26 +373,32 @@
             <h2 class="section-title">Our Programs</h2>
             <div class="program-cards">
                 <div class="program-card">
-                    <div class="program-image"></div>
+                    <div class="program-image">
+                        <img src="night_sky.jpg" alt="Night_Sky">
+                    </div>
                     <div class="program-content">
-                        <h3>Star Parties</h3>
-                        <p>Regular stargazing events for the public with telescopes and expert guidance to explore the night sky.</p>
+                        <h3>Night Sky Observation</h3>
+                        <p>Regular Night Sky Observation events for the public with telescopes and expert guidance to explore the night sky.</p>
                         <a href="#">Learn more →</a>
                     </div>
                 </div>
                 <div class="program-card">
-                    <div class="program-image"></div>
+                    <div class="program-image">
+                        <img src="outreach.jpg" alt="Outreach">
+                    </div>
                     <div class="program-content">
-                        <h3>Astronomy Education</h3>
-                        <p>Educational programs in schools and colleges to inspire young minds in astronomy and space science.</p>
+                        <h3>Outreach</h3>
+                        <p>Outreach programs in schools and colleges to inspire young minds in astronomy and space science.</p>
                         <a href="#">Learn more →</a>
                     </div>
                 </div>
                 <div class="program-card">
-                    <div class="program-image"></div>
+                    <div class="program-image">
+                        <img src="science_festival.jpeg" alt="science_festival"
+                    </div>
                     <div class="program-content">
-                        <h3>Research Initiatives</h3>
-                        <p>Supporting astronomical research and collaboration with international organizations and institutions.</p>
+                        <h3>Science Festivals</h3>
+                        <p>Organizing Science Festival Programs to inspire young minds to engage .</p>
                         <a href="#">Learn more →</a>
                     </div>
                 </div>
@@ -435,55 +412,9 @@
             <h2 class="section-title">Upcoming Events</h2>
             <div class="event-list">
                 <div class="event-item">
-                    <div class="event-date">October 15, 2023</div>
-                    <h3>Public Star Party at Nagarkot</h3>
-                    <p>Join us for a night of stargazing with telescopes and astronomy experts.</p>
-                </div>
-                <div class="event-item">
-                    <div class="event-date">November 5, 2023</div>
-                    <h3>Astrophotography Workshop</h3>
-                    <p>Learn how to capture stunning images of the night sky with your camera.</p>
-                </div>
-                <div class="event-item">
-                    <div class="event-date">December 13-14, 2023</div>
-                    <h3>Geminid Meteor Shower Observation</h3>
-                    <p>Watch the year's best meteor shower from a dark location with NASO.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- News Section -->
-    <section class="news">
-        <div class="container">
-            <h2 class="section-title">Latest News</h2>
-            <div class="news-grid">
-                <div class="news-card">
-                    <div class="news-image"></div>
-                    <div class="news-content">
-                        <div class="news-date">September 10, 2023</div>
-                        <h3>NASO Partners with International Astronomy Group</h3>
-                        <p>We're excited to announce our new partnership with the Global Astronomy Network.</p>
-                        <a href="#">Read more →</a>
-                    </div>
-                </div>
-                <div class="news-card">
-                    <div class="news-image"></div>
-                    <div class="news-content">
-                        <div class="news-date">August 25, 2023</div>
-                        <h3>New Dark Sky Site Identified in Mustang</h3>
-                        <p>A potential site for astronomical observation has been identified in Upper Mustang.</p>
-                        <a href="#">Read more →</a>
-                    </div>
-                </div>
-                <div class="news-card">
-                    <div class="news-image"></div>
-                    <div class="news-content">
-                        <div class="news-date">July 18, 2023</div>
-                        <h3>Solar Eclipse Viewing Event a Success</h3>
-                        <p>Thousands gathered across Nepal to view the partial solar eclipse with NASO.</p>
-                        <a href="#">Read more →</a>
-                    </div>
+                    <div class="event-date">September 30, 2025</div>
+                    <h3>Night Sky Observation</h3>
+                    <p>Join us for a night of stargazing with telescopes.</p>
                 </div>
             </div>
         </div>
@@ -494,8 +425,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>About NASO</h3>
-                    <p>The Nepal Astronomical Society (NASO) is dedicated to promoting astronomy and space science in Nepal through education, research, and outreach activities.</p>
+                    <h3>About YISS</h3>
+                    <p>Youth Innovative Science Society (YISS) is dedicated to promoting science and technology in local level through the principle of Learn Create and Share.</p>
                 </div>
                 <div class="footer-column">
                     <h3>Quick Links</h3>
@@ -504,7 +435,6 @@
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Programs</a></li>
                         <li><a href="#">Events</a></li>
-                        <li><a href="#">News</a></li>
                         <li><a href="#">Gallery</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
@@ -512,22 +442,14 @@
                 <div class="footer-column">
                     <h3>Contact Us</h3>
                     <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt"></i> Kathmandu, Nepal</li>
-                        <li><i class="fas fa-phone"></i> +977 1 4123456</li>
-                        <li><i class="fas fa-envelope"></i> info@nepalastronomicalsociety.org</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Itahari, Nepal</li>
+                        <li><i class="fas fa-phone"></i> +977 9823074087</li>
+                        <li><i class="fas fa-envelope"></i> youthinnovativesciencesociety@gmail.com</li>
                     </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Subscribe</h3>
-                    <p>Subscribe to our newsletter for updates on events and programs.</p>
-                    <form>
-                        <input type="email" placeholder="Your email address" style="padding: 10px; width: 100%; margin-bottom: 10px; border-radius: 4px; border: none;">
-                        <button type="submit" class="btn" style="width: 100%;">Subscribe</button>
-                    </form>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 Nepal Astronomical Society (NASO). All rights reserved.</p>
+                <p>&copy; 2025 Youth Innovative Science Society (YISS). All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -536,7 +458,7 @@
         // Simple JavaScript for interactive elements
         document.addEventListener('DOMContentLoaded', function() {
             // Mobile menu toggle (would be added in a real implementation)
-            console.log('NASO website loaded');
+            console.log('YISS website loaded');
             
             // Example: Smooth scrolling for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
