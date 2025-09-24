@@ -184,6 +184,13 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s;
         }
+        .about-image iframe {
+            max-width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;  /* keeps correct proportions */
+            border-radius: 8px;    /* optional */
+        }
+
 
         .program-card:hover {
             transform: translateY(-5px);
@@ -316,23 +323,20 @@
                 </div>
                 <div class="social-links">
                     <a href="https://www.facebook.com/YISS2019"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-x"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
         </div>
         <div class="container header-main">
-            <div class="logo">
+            <div class="logo" onclick="window.location.href='index.html'" style="cursor:pointer;">
                 <img src="logo.png" alt="YISS Logo">
                 <div class="logo-text">Youth Innovative Science Society</div>
             </div>
             <ul class="nav-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
                 <li><a href="programs.html">Programs</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Gallery</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
@@ -349,23 +353,30 @@
     </section>
 
     <!-- About Section -->
-    <section class="about">
-        <div class="container">
-            <h2 class="section-title">About YISS</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Youth Innovative Science Society(YISS) is a non-profit organization established in 2019 with the goal of promoting science and technology in Itahari.</p>
-                    <p>We organize various programs, outreach, and night sky observation to engage the public and students in science. Our mission is to create a platform to learn create and share thier knowledge to others.</p>
-                    <a href="#" class="btn">Learn More</a>
-                </div>
-                <div class="about-image">
-                    <img src="first_Program.jpg" alt="About NASO"
-                    width="250"
-                    height="250">
-                </div>
+<section class="about">
+    <div class="container">
+        <h2 class="section-title">About YISS</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Youth Innovative Science Society (YISS) is a non-profit organization dedicated to promoting science and technology in the Khanar region and across Nepal. Founded in 2019, we have grown into a dynamic community of students, educators, and science enthusiasts working together to advance research, innovation, and public engagement.</p>
+                <p>Through hands-on workshops, night-sky observations, interactive talks, and outreach programs in schools and communities, YISS seeks to make science accessible, exciting, and relevant. By connecting learners with real scientific experiences and fostering collaboration, we aim to empower the next generation of thinkers and innovators who will help shape a brighter, knowledge-driven future for Nepal and beyond.</p>
+                <a href="aboutus.html" class="btn">Learn More</a>
+            </div>
+            <div class="about-image">
+                <iframe 
+                    width="560" 
+                    height="315"
+                    src="https://www.youtube.com/embed/7ZuEs_cVkZo?si=Bn3_Py91F-0yW1IB"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Programs Section -->
     <section class="programs">
@@ -461,12 +472,11 @@
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Programs</a></li>
-                        <li><a href="#">Events</a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -480,6 +490,12 @@
             </div>
             <div class="copyright">
                 <p>&copy; 2025 Youth Innovative Science Society (YISS). All rights reserved.</p>
+                <p>
+                    Designed and Created by 
+                    <a href="#" style="color: red; text-decoration: none;">
+                        Ramesh Neupane
+                    </a>
+                </p>
             </div>
         </div>
     </footer>

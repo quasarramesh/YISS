@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Youth Innovative Science Society</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0c4da2;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #08367a;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #0c4da2;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #08367a;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .top-bar {
+            background-color: #0c4da2;
+            color: white;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .social-links a {
+            color: white;
+            margin-left: 15px;
+        }
+
+        .header-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 60px;
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0c4da2;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-menu li {
+            margin-left: 25px;
+        }
+
+        .nav-menu a {
+            color: #333;
+            font-weight: 500;
+        }
+
+        .nav-menu a:hover {
+            color: #0c4da2;
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        .breadcrumb li {
+            margin: 0 10px;
+        }
+
+        .breadcrumb li:after {
+            content: "/";
+            margin-left: 10px;
+            color: #ccc;
+        }
+
+        .breadcrumb li:last-child:after {
+            content: "";
+        }
+
+        .breadcrumb a {
+            color: #ccc;
+        }
+
+        .breadcrumb a:hover {
+            color: white;
+        }
+
+        /* About Intro Section */
+        .about-intro {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #0c4da2;
+            font-size: 2.2rem;
+        }
+
+        .intro-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .intro-text h2 {
+            color: #0c4da2;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .intro-text p {
+            margin-bottom: 20px;
+        }
+
+        .intro-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .intro-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Mission & Vision Section */
+        .mission-vision {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .mv-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .mv-card {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .mv-icon {
+            font-size: 3rem;
+            color: #0c4da2;
+            margin-bottom: 20px;
+        }
+
+        .mv-card h3 {
+            margin-bottom: 20px;
+            color: #0c4da2;
+            font-size: 1.5rem;
+        }
+
+        /* Team Section */
+        .team {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .team-member {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .member-image img {
+            width: 100%;
+            height: 250px;
+            background-color: #0c4da2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+        }
+
+        .member-info {
+            padding: 20px;
+        }
+
+        .member-info h3 {
+            color: #0c4da2;
+            margin-bottom: 5px;
+        }
+
+        .member-role {
+            color: #666;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        /* History Section */
+        .history {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: #0c4da2;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            margin-bottom: 40px;
+            position: relative;
+            width: 50%;
+            padding: 0 40px;
+            box-sizing: border-box;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .timeline-year {
+            font-weight: bold;
+            color: #0c4da2;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 80px 0;
+            background: linear-gradient(rgba(12, 77, 162, 0.9), rgba(12, 77, 162, 0.9)), url('https://images.unsplash.com/photo-1465101162946-4377e57745c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0c4da2;
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #ccc;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-main {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-menu {
+                margin-top: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-menu li {
+                margin: 0 10px 10px;
+            }
+
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .intro-content,
+            .mv-container {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline:before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 50px;
+                padding-right: 0;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="top-bar">
+            <div class="container top-bar-content">
+                <div class="contact-info">
+                    <span><i class="fas fa-envelope"></i> youthinnovativesciencesociety@gmail.com</span>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/YISS2019"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="container header-main">
+            <div class="logo" onclick="window.location.href='index.html'" style="cursor:pointer;">
+                <img src="logo.png" alt="YISS Logo">
+                <div class="logo-text">Youth Innovative Science Society</div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>About Us</h1>
+            <ul class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li>About</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- About Intro Section -->
+    <section class="about-intro">
+        <div class="container">
+            <div class="intro-content">
+                <div class="intro-text">
+                    <h2>Welcome to Youth Innovative Science Society</h2>
+                    <p>Youth Innovative Science Society (YISS) is a non-profit organization dedicated to promoting science and technology in the Khanar region and across Nepal. Founded in 2019, we have grown into a dynamic community of students, educators, and science enthusiasts working together to advance research, innovation, and public engagement.</p>
+                    <p>Our mission is to inspire curiosity and nurture a scientific temper in people of all ages by opening doors to the fascinating world of science. We believe that exploring and understanding the universe not only deepens our appreciation of the cosmos but also encourages a lifelong spirit of inquiry, creativity, and discovery.</p>
+                    <p> Through hands-on workshops, night-sky observations, interactive talks, and outreach programs in schools and communities, YISS seeks to make science accessible, exciting, and relevant. By connecting learners with real scientific experiences and fostering collaboration, we aim to empower the next generation of thinkers and innovators who will help shape a brighter, knowledge-driven future for Nepal and beyond.</p>
+                </div>
+                <div class="intro-image">
+                    <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="PAS Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision">
+        <div class="container">
+            <h2 class="section-title">Our Mission & Vision</h2>
+            <div class="mv-container">
+                <div class="mv-card">
+                    <div class="mv-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>Our mission is to create a sustainable learning-teaching platform in Itahari that is open and accessible to every student group. We strive to spark curiosity, nurture critical thinking, and encourage hands-on exploration so that students of all backgrounds can discover their passions and grow into lifelong learners.  </p>
+                </div>
+                <div class="mv-card">
+                    <div class="mv-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>Our vision is to empower young minds to reach for higher aspirations and to share the beauty of the universe with people of all ages. By making night-sky observation and hands-on learning open to everyone, we aim to build a culture of curiosity and wonder.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team">
+        <div class="container">
+            <h2 class="section-title">Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="alish.jpeg" alt="alish">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Alish Dhakal</h3>
+                        <p class="member-role">President & Founder</p>
+                        <p>Science educator passionate about bringing science to rural communities.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Sapath Dahal</h3>
+                        <p class="member-role">Post</p>
+                        <p>Lorem epsum brrr.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="ramesh.jpeg" alt = "ramesh">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Ramesh Neupane</h3>
+                        <p class="member-role">Post</p>
+                        <p>Undergrudate Physis student at St. Xavier College, Maitighar. Expert in Telescope handeling and program coordination.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Anisha Adhikari</h3>
+                        <p class="member-role">Secretary</p>
+                        <p>Lorem epsum brrr.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section class="history">
+        <div class="container">
+            <h2 class="section-title">Our History</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2019</div>
+                        <p>YISS is founded by the group of enthuestats</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2020</div>
+                        <p>Weekly School Programs and sky observation Programs were conducted</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2021</div>
+                        <p>Organized first science olympiad in Khanar</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2022</div>
+                        <p>Presentation program Siries were launched reaching 10+ schools</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2023</div>
+                        <p>Mini science fair and Education Fair was organized for the first time in Khanar</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2024</div>
+                        <p>Launched Night Sky observation and Public outreach Program series</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2025</div>
+                        <p>Launched YISS Podcast.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+    <div class="container">
+        <h2 class="section-title">Our Impact</h2>
+        <div class="stats-grid">
+        <div class="stat-item">
+            <h3 class="count" data-target="5400">0</h3>
+            <p>Students Reached</p>
+        </div>
+        <div class="stat-item">
+            <h3 class="count" data-target="40">0</h3>
+            <p>Events Organized</p>
+        </div>
+        <div class="stat-item">
+            <h3 class="count" data-target="12">0</h3>
+            <p>Schools Partnered</p>
+        </div>
+        <div class="stat-item">
+            <h3 class="count" data-target="6">0</h3>
+            <p>Years of Service</p>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Footer -->
+   <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About YISS</h3>
+                    <p>Youth Innovative Science Society (YISS) is dedicated to promoting science and technology in local level through the principle of Learn Create and Share.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Itahari, Nepal</li>
+                        <li><i class="fas fa-phone"></i> +977 9823074087</li>
+                        <li><i class="fas fa-envelope"></i> youthinnovativesciencesociety@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Youth Innovative Science Society (YISS). All rights reserved.</p>
+                <p>
+                    Designed and Created by 
+                    <a href="#" style="color: red; text-decoration: none;">
+                        Ramesh Neupane
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript for the timeline animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            
+            function checkTimelineAnimation() {
+                const triggerBottom = window.innerHeight / 5 * 4;
+                
+                timelineItems.forEach(item => {
+                    const itemTop = item.getBoundingClientRect().top;
+                    
+                    if (itemTop < triggerBottom) {
+                        item.style.opacity = 1;
+                        item.style.transform = 'translateX(0)';
+                    }
+                });
+            }
+            
+            // Initialize timeline items
+            timelineItems.forEach(item => {
+                item.style.opacity = 0;
+                if (item.classList.contains('timeline-item:nth-child(odd)') || 
+                    parseInt(getComputedStyle(item).left) === 0) {
+                    item.style.transform = 'translateX(-50px)';
+                } else {
+                    item.style.transform = 'translateX(50px)';
+                }
+                item.style.transition = 'all 0.8s ease';
+            });
+            
+            // Check on load and scroll
+            window.addEventListener('scroll', checkTimelineAnimation);
+            checkTimelineAnimation();
+            
+            // Team member hover effect
+            const teamMembers = document.querySelectorAll('.team-member');
+            teamMembers.forEach(member => {
+                member.addEventListener('mouseover', function() {
+                    this.querySelector('.member-image').style.backgroundColor = '#08367a';
+                });
+                member.addEventListener('mouseout', function() {
+                    this.querySelector('.member-image').style.backgroundColor = '#0c4da2';
+                });
+            });
+        });
+    </script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll('.count');
+    const duration = 2000; // total animation time in ms
+
+    function startCounting() {
+        counters.forEach(counter => {
+        const target = +counter.dataset.target;
+        const increment = target / (duration / 16); // roughly 60fps
+
+        const updateCount = () => {
+            const current = +counter.innerText;
+            if (current < target) {
+            counter.innerText = Math.ceil(current + increment);
+            requestAnimationFrame(updateCount);
+            } else {
+            counter.innerText = target + (target >= 1000 ? '+' : '');
+            }
+        };
+
+        updateCount();
+        });
+    }
+
+    // Start counting only when the stats section enters the viewport
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            startCounting();
+            observer.disconnect(); // run only once
+        }
+        });
+    });
+
+    observer.observe(document.querySelector('.stats'));
+    });
+    </script>
+</body>
+</html>
